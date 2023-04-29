@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robok Cantik</title>
+    <link rel="icon" type="image/png" href="images/almari.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#" class="logo"><img src="images/almari.png" /></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://instagram.com/robok_cantik?igshid=YmMyMTA2M2Y=">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>Shopping & retails for <span>Kaftan, Sock, Bawal</span></h2>
+          <p>
+            Founded in 2020, our establishment has been sold good quality of kaftan, 
+            sock and bawal, sourced from various designs. We are dedicated to 
+            travelling the world, finding the best material and design, and bringing 
+            back to you here in our shop.
+          </p>
+          <a href="https://instagram.com/robok_cantik?igshid=YmMyMTA2M2Y=">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img src="images/kucing.png" class="sock" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="images/kucing.png"
+            onclick="imgSlider('images/kucing.png');changeCircleColor('#FFB6C1')"
+          />
+        </li>
+        <li>
+          <img
+            src="images/muka.png"
+            onclick="imgSlider('images/muka.png');changeCircleColor('#90EE90')"
+          />
+        </li>
+        <li>
+          <img
+            src="images/kf.png"
+            onclick="imgSlider('images/kf.png');changeCircleColor('#ADD8E6')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="https://instagram.com/robok_cantik?igshid=YmMyMTA2M2Y="><img src="images/instagram.png" /></a>
+        </li>
+      </ul>
+    </section>
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".sock").src = anything;
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robok Cantik</title>
+    <link rel="icon" type="image/png" href="images/almari.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#" class="logo"><img src="images/almari.png" /></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://instagram.com/robok_cantik?igshid=YmMyMTA2M2Y=">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>It's not just a cloth<br />It's <span>Robok Cantik</span></h2>
+          <p>
+            When you walk into our shop to start your day, we are dedicated 
+            to providing you with friendly service, a welcoming atmosphere,
+             and above all else, excellent products made with the highest quality
+              ingredients. If you are not satisfied, please let us know and 
+              we will do whatever we can to make things right!
+          </p>
+          <a href="https://instagram.com/robok_cantik?igshid=YmMyMTA2M2Y=">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img src="images/kucing.png" class="sock" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="images/kucing.png"
+            onclick="imgSlider('images/kucing.png');changeCircleColor('#FFB6C1')"
+          />
+        </li>
+        <li>
+          <img
+            src="images/muka.png"
+            onclick="imgSlider('images/muka.png');changeCircleColor('#90EE90')"
+          />
+        </li>
+        <li>
+          <img
+            src="images/kf.png"
+            onclick="imgSlider('images/kf.png');changeCircleColor('#ADD8E6')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="https://instagram.com/robok_cantik?igshid=YmMyMTA2M2Y="><img src="images/instagram.png" /></a>
+        </li>
+      </ul>
+    </section>
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".sock").src = anything;
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+
+      function toggleMenu() {
+        var menuToggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation')
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+      }
+    </script>
+  </body>
+</html>
